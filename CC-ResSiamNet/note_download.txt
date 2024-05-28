@@ -1,8 +1,0 @@
-Datasets are too large (>80GB). The files were separated to three parts. 
-
-In command line,
-
-To download files from Box
-> wget https://smu.box.com/shared/static/6msurou2dmjeezudeuh5b1utp1rla6e6 -O part_01
-> wget https://smu.box.com/shared/static/7rogcc3u232zzj916uwn67p5cflsdz52 -O part_02
-> wget https://smu.box.com/shared/static/e44pvh9x2g853jy5x7qgb3qmmx5j9wdt -O part_03
