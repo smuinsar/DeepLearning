@@ -12,4 +12,3 @@ Reference:<br><B>Kim, J.</B>, Jung, H.-S., Lu, Z., 2025. Ground surface displace
 AI-generated conversations about findings in the published article (Youtube clip, created by NotebookLM).<br>
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sfOGJBBOrCU/0.jpg)](https://www.youtube.com/watch?v=sfOGJBBOrCU)
 <br></br>
-<iframe width="560" height="315" src="https://youtu.be/sfOGJBBOrCU"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
