@@ -10,5 +10,5 @@ https://zenodo.org/records/11358571
 Reference:<br><B>Kim, J.</B>, Jung, H.-S., Lu, Z., 2025. Ground surface displacement measurement from SAR imagery using deep learning, <I>Remote Sensing of Environment</I>, 318, 114577, https://doi.org/10.1016/j.rse.2024.114577
 <br></br>
 AI-generated <a href="https://youtu.be/sfOGJBBOrCU">conversations</a> about findings in the published article (Youtube clip, created by NotebookLM).<br>
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sfOGJBBOrCU/0.jpg)](https://www.youtube.com/watch?v=sfOGJBBOrCU)
+&emsp; &emsp;[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/sfOGJBBOrCU/0.jpg)](https://www.youtube.com/watch?v=sfOGJBBOrCU)
 <br></br>
