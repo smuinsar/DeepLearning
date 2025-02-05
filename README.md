@@ -2,7 +2,7 @@
 
 ### CC-ResSiamNet
 Optimized with Tensorflow's Keras API version 2.13.1 <br>
-Implimented in SMU's NVIDIA DGX SuperPOD utilizing 8 GPUs equipped with NVIDIA's A100 80GB
+Implemented in SMU's NVIDIA DGX SuperPOD utilizing 8 GPUs equipped with NVIDIA's A100 80GB
 
 * Dataset:<br>
 https://zenodo.org/records/11358571
