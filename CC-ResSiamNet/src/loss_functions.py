@@ -4,7 +4,7 @@ from tensorflow.keras.activations import softmax
 from typing import Callable, Union
 import numpy as np
 
-def off_mae_loss(use_mask: bool = False, use_huber: bool = True):
+def off_mae_loss(use_mask: bool = False, use_huber: bool = True, huber_delta: float = 0.01):
     """
     Combined MAE loss function with optional Huber loss component and masking.
     Args:
@@ -12,15 +12,16 @@ def off_mae_loss(use_mask: bool = False, use_huber: bool = True):
                         If False, calculates loss on all values.
         use_huber (bool): If True, applies Huber loss component for robustness.
                          If False, uses pure MAE loss.
+        huber_delta (float): threshold between quadratic and linear regions.
+                         for a large error (>huber_delta): MAE-like. for a small error (<huber_delta): MSE-like
     Returns:
         function: Loss function that takes y_true and y_pred tensors
     """
     def loss(y_true: tf.Tensor, y_pred: tf.Tensor) -> tf.Tensor:
         error = y_pred - y_true
-        
+
         if use_huber:
             # Huber loss component for robustness
-            huber_delta = 1.0
             abs_error = K.abs(error)
             quadratic = K.minimum(abs_error, huber_delta)
             linear = abs_error - quadratic
@@ -31,7 +32,7 @@ def off_mae_loss(use_mask: bool = False, use_huber: bool = True):
 
         # Calculate mean across all dimensions except batch
         axis_to_reduce = range(1, K.ndim(y_pred))
-        
+
         if use_mask:
             # Create mask for non-zero values
             w = K.cast(K.not_equal(y_true, 0), 'float32')
@@ -44,7 +45,7 @@ def off_mae_loss(use_mask: bool = False, use_huber: bool = True):
             return K.mean(loss_per_pixel, axis=axis_to_reduce)
     return loss
 
-def off_mse_loss(use_mask: bool = False, use_huber: bool = False):
+def off_mse_loss(use_mask: bool = False, use_huber: bool = False, huber_delta: float = 0.01):
     """
     Combined MSE loss function with optional Huber loss and masking.
     Args:
@@ -52,15 +53,16 @@ def off_mse_loss(use_mask: bool = False, use_huber: bool = False):
                         If False, calculates loss on all values.
         use_huber (bool): If True, applies Huber loss component for robustness.
                          If False, uses pure MSE loss.
+        huber_delta (float): threshold between quadratic and linear regions.
+                         for a large error (>huber_delta): MAE-like. for a small error (<huber_delta): MSE-like
     Returns:
         function: Loss function that takes y_true and y_pred tensors
     """
     def loss(y_true: tf.Tensor, y_pred: tf.Tensor) -> tf.Tensor:
         error = y_pred - y_true
-        
+
         if use_huber:
             # Huber loss component for robustness
-            huber_delta = 1.0
             abs_error = K.abs(error)
             quadratic = K.minimum(abs_error, huber_delta)
             linear = abs_error - quadratic
@@ -71,7 +73,7 @@ def off_mse_loss(use_mask: bool = False, use_huber: bool = False):
 
         # Calculate mean across all dimensions except batch
         axis_to_reduce = range(1, K.ndim(y_pred))
-        
+
         if use_mask:
             # Create mask for non-zero values
             w = K.cast(K.not_equal(y_true, 0), 'float32')
