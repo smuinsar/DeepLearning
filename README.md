@@ -7,7 +7,7 @@ Implimented in SMU's NVIDIA DGX SuperPOD utilizing 8 GPUs equipped with NVIDIA's
 * Dataset:<br>
 https://zenodo.org/records/11358571
 
-* Multi-Scenario Inference
+* Multi-Scenario Inference:
   - San Quintin glacier, Chile<br>
   <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0034425724006035-gr13_lrg.jpg" alt="San Quintin glacier" width="500" />
 
