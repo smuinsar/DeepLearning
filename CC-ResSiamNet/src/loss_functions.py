@@ -4,7 +4,7 @@ from tensorflow.keras.activations import softmax
 from typing import Callable, Union
 import numpy as np
 
-def off_mae_loss(use_mask: bool = False, use_huber: bool = True, huber_delta: float = 0.01):
+def off_mae_loss(use_mask: bool = False, use_huber: bool = True, huber_delta: float = 0.1):
     """
     Combined MAE loss function with optional Huber loss component and masking.
     Args:
@@ -45,7 +45,7 @@ def off_mae_loss(use_mask: bool = False, use_huber: bool = True, huber_delta: fl
             return K.mean(loss_per_pixel, axis=axis_to_reduce)
     return loss
 
-def off_mse_loss(use_mask: bool = False, use_huber: bool = False, huber_delta: float = 0.01):
+def off_mse_loss(use_mask: bool = False, use_huber: bool = False, huber_delta: float = 0.1):
     """
     Combined MSE loss function with optional Huber loss and masking.
     Args:
