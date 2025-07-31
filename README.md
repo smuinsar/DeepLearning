@@ -5,6 +5,8 @@
 
 * Architecture:<br>
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0034425724006035-gr4_lrg.jpg" alt="San Quintin glacier" width="1000" />
+Modules:
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0034425724006035-gr3_lrg.jpg" alt="San Quintin glacier" width="1000" />
 
 Optimized with Tensorflow's Keras API version 2.13.1 <br>
 Implemented in SMU's NVIDIA DGX SuperPOD utilizing 8 GPUs equipped with NVIDIA's A100 80GB
