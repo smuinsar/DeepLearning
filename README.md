@@ -1,6 +1,7 @@
 # DeepLearning
 
 ### CC-ResSiamNet
+<div style="background-color: cyan; padding: 10px; border: 1px solid black;">Deep learning model for estimating ground surface displacement from SAR amplitude images, trained using offset tracking results as ground truth</div> <br>
 Optimized with Tensorflow's Keras API version 2.13.1 <br>
 Implemented in SMU's NVIDIA DGX SuperPOD utilizing 8 GPUs equipped with NVIDIA's A100 80GB
 
